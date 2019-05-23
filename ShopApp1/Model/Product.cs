@@ -12,21 +12,22 @@ namespace ShopApp1.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Products
+    public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Products()
+        public Product()
         {
-            this.Orders = new HashSet<Orders>();
+            this.Orders = new HashSet<Order>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
         public Nullable<int> Category_id { get; set; }
         public Nullable<int> Price { get; set; }
+        public Nullable<short> Status { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace ShopApp1.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class AdminSettings
+    public partial class AdminSetting
     {
         public int Id { get; set; }
         public string Email { get; set; }

@@ -14,8 +14,8 @@ namespace ShopApp1
     public partial class Dashboard : Form
     {
         ShoppingEntities db = new ShoppingEntities();
-        Customers activeCustomer { get; set; }
-        public Dashboard(Customers a)
+        Customer activeCustomer { get; set; }
+        public Dashboard(Customer a)
         {
             activeCustomer=a;
             InitializeComponent();
@@ -34,18 +34,18 @@ namespace ShopApp1
         }
         private void FilterChecKCategory()
         {
-            cmbFilterCategory.Items.AddRange(db.Category.Select(c => c.Name).ToArray());
+            cmbFilterCategory.Items.AddRange(db.Categories.Where(a=>a.Status==1).Select(c => c.Name).ToArray());
         }
         private void FillCheckCategory()
         {
-            cmbCategory.Items.AddRange(db.Category.Select(c => c.Name).ToArray());
+            cmbCategory.Items.AddRange(db.Categories.Where(a => a.Status == 1).Select(c => c.Name).ToArray());
         }
         private void FillDataView(int id)
         {
             dtgView.DataSource = db.Orders.Where(a=>a.Customer_id==id).Select(o =>new
             {
-                o.Products.Name,
-                o.Products.Price,
+                o.Product.Name,
+                o.Product.Price,
                 o.Amount,
                 o.Purchase_date,
 
@@ -57,7 +57,7 @@ namespace ShopApp1
         {
             
             string categorName= cmbCategory.Text;
-          int categoryID=  db.Category.First(c => c.Name == categorName).Id;
+          int categoryID=  db.Categories.First(c => c.Name == categorName).Id;
             cmbProduct.Items.Clear();
             FillCheckProduct(categoryID);
 
@@ -110,10 +110,22 @@ namespace ShopApp1
             {
                 if(int.TryParse(amount,out amounts))
                 {
-                    Products selectedProduct = db.Products.FirstOrDefault(pr => pr.Name == product);
+                    Product selectedProduct = db.Products.FirstOrDefault(pr => pr.Name == product);
+                    int CategoryId = db.Categories.First(a => a.Name == category).Id;
+                    if (selectedProduct != null)
+                    {
+                        Product prd = new Product();
+                        prd.Name = product;
+                        prd.Category_id = CategoryId;
 
+
+                    }
+                    else
+                    {
+
+                    }
                     lblError.Visible = false;
-                    Orders ord = new Orders();
+                    Order ord = new Order();
                     ord.Customer_id = activeCustomer.Id;
                     ord.Product_id = selectedProduct.Id;
                     ord.Purchase_date = DateTime.Now;
@@ -155,11 +167,11 @@ namespace ShopApp1
                 
             }
             dtgView.DataSource = db.Orders.Where(or => or.Customer_id == activeCustomer.Id &&
-            or.Products.Category.Name.Contains(categoryName) && or.Products.Price >= minPrice &&
-            or.Products.Price <= maxPrice).Select(or => new
+            or.Product.Category.Name.Contains(categoryName) && or.Product.Price >= minPrice &&
+            or.Product.Price <= maxPrice).Select(or => new
             {
-                or.Products.Name,
-                or.Products.Price,
+                or.Product.Name,
+                or.Product.Price,
                 or.Purchase_date,
                 or.Amount
 

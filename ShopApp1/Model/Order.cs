@@ -12,7 +12,7 @@ namespace ShopApp1.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Orders
+    public partial class Order
     {
         public int Id { get; set; }
         public Nullable<int> Customer_id { get; set; }
@@ -20,7 +20,7 @@ namespace ShopApp1.Model
         public Nullable<int> Amount { get; set; }
         public Nullable<System.DateTime> Purchase_date { get; set; }
     
-        public virtual Customers Customers { get; set; }
-        public virtual Products Products { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

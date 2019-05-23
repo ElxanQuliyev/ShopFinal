@@ -82,39 +82,42 @@
             this.dtgCategory.ReadOnly = true;
             this.dtgCategory.Size = new System.Drawing.Size(249, 399);
             this.dtgCategory.TabIndex = 3;
+            this.dtgCategory.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DtgCategory_RowHeaderMouseDoubleClick);
             // 
             // btnDeleteCategory
             // 
             this.btnDeleteCategory.BackColor = System.Drawing.Color.OliveDrab;
             this.btnDeleteCategory.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteCategory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeleteCategory.Location = new System.Drawing.Point(31, 330);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(31, 256);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
             this.btnDeleteCategory.Size = new System.Drawing.Size(173, 52);
             this.btnDeleteCategory.TabIndex = 4;
             this.btnDeleteCategory.Text = "Delete ";
             this.btnDeleteCategory.UseVisualStyleBackColor = false;
             this.btnDeleteCategory.Visible = false;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.BtnDeleteCategory_Click);
             // 
             // btnCategoryEdit
             // 
             this.btnCategoryEdit.BackColor = System.Drawing.Color.OliveDrab;
             this.btnCategoryEdit.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoryEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCategoryEdit.Location = new System.Drawing.Point(31, 248);
+            this.btnCategoryEdit.Location = new System.Drawing.Point(31, 232);
             this.btnCategoryEdit.Name = "btnCategoryEdit";
             this.btnCategoryEdit.Size = new System.Drawing.Size(173, 52);
             this.btnCategoryEdit.TabIndex = 5;
             this.btnCategoryEdit.Text = "Edit Category";
             this.btnCategoryEdit.UseVisualStyleBackColor = false;
             this.btnCategoryEdit.Visible = false;
+            this.btnCategoryEdit.Click += new System.EventHandler(this.BtnCategoryEdit_Click);
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblError.Location = new System.Drawing.Point(27, 412);
+            this.lblError.Location = new System.Drawing.Point(27, 431);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(137, 22);
             this.lblError.TabIndex = 6;

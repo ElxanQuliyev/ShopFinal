@@ -41,10 +41,10 @@ namespace ShopApp1
                 {
                     if(password== repeatpassword)
                     {
-                        Customers cusEmail = db.Customers.FirstOrDefault(a => a.Email == email);
+                        Customer cusEmail = db.Customers.FirstOrDefault(a => a.Email == email);
                         if (cusEmail == null)
                         {
-                            Customers cus = new Customers();
+                            Customer cus = new Customer();
                             cus.Firstname = firstname;
                             cus.Surname = lastname;
                             cus.Email = email;

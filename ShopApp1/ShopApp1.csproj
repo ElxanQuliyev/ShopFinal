@@ -61,6 +61,12 @@
     <Compile Include="AddCategory.Designer.cs">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,38 +92,38 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\AdminSettings.cs">
-      <DependentUpon>DB.tt</DependentUpon>
+    <Compile Include="Model\AdminSetting.cs">
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Category.cs">
-      <DependentUpon>DB.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Customers.cs">
-      <DependentUpon>DB.tt</DependentUpon>
+    <Compile Include="Model\Customer.cs">
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DB.Context.cs">
+    <Compile Include="Model\db.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DB.Context.tt</DependentUpon>
+      <DependentUpon>db.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DB.cs">
+    <Compile Include="Model\db.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DB.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DB.Designer.cs">
+    <Compile Include="Model\db.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DB.edmx</DependentUpon>
+      <DependentUpon>db.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\Orders.cs">
-      <DependentUpon>DB.tt</DependentUpon>
+    <Compile Include="Model\Order.cs">
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Products.cs">
-      <DependentUpon>DB.tt</DependentUpon>
+    <Compile Include="Model\Product.cs">
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>DB.tt</DependentUpon>
+    <Compile Include="Model\sysdiagram.cs">
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
@@ -154,12 +163,12 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\DB.edmx">
+    <EntityDeploy Include="Model\db.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DB.Designer.cs</LastGenOutput>
+      <LastGenOutput>db.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\DB.edmx.diagram">
-      <DependentUpon>DB.edmx</DependentUpon>
+    <None Include="Model\db.edmx.diagram">
+      <DependentUpon>db.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -179,15 +188,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\DB.Context.tt">
+    <Content Include="Model\db.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB.edmx</DependentUpon>
-      <LastGenOutput>DB.Context.cs</LastGenOutput>
+      <DependentUpon>db.edmx</DependentUpon>
+      <LastGenOutput>db.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\DB.tt">
+    <Content Include="Model\db.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB.edmx</DependentUpon>
-      <LastGenOutput>DB.cs</LastGenOutput>
+      <DependentUpon>db.edmx</DependentUpon>
+      <LastGenOutput>db.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

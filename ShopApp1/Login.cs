@@ -35,14 +35,7 @@ namespace ShopApp1
 
             if (allEmpty)
             {
-                //string adminName = db.AdminSettings.First(ad => ad.Id == 1).Email;
-                //string adminPassword = db.AdminSettings.First(ad => ad.Id == 1).Password;
-                //if (email == adminName && password == adminPassword)
-                //{
-                //    AdminDashboard ads = new AdminDashboard();
-                //    this.Close();
-                //    ads.ShowDialog();
-                //}
+              
                 string adminName = db.AdminSettings.First(ad => ad.Id == 1).Email;
                 string adminPassword = db.AdminSettings.First(ad => ad.Id == 1).Password;
                 if(email==adminName && password == adminPassword)
@@ -53,7 +46,7 @@ namespace ShopApp1
                 }
                 else
                 {
-                    Customers cus = db.Customers.FirstOrDefault(a => a.Email == email);
+                    Customer cus = db.Customers.FirstOrDefault(a => a.Email == email);
 
                     if (cus != null)
                     {

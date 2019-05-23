@@ -25,11 +25,11 @@ namespace ShopApp1.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AdminSettings> AdminSettings { get; set; }
-        public virtual DbSet<Category> Category { get; set; }
-        public virtual DbSet<Customers> Customers { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
-        public virtual DbSet<Products> Products { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<AdminSetting> AdminSettings { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

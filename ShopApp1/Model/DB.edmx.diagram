@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="87ffbf36727a4c79a4657c4582dc844a" Name="Diagram1">
-        <EntityTypeShape EntityType="ShoppingModel.AdminSettings" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShoppingModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShoppingModel.Customers" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShoppingModel.Orders" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShoppingModel.Products" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShoppingModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="e45eaacbe3694d58b5af773640e39f4e" Name="Diagram1">
+        <EntityTypeShape EntityType="ShoppingModel.AdminSetting" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShoppingModel.Category" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShoppingModel.Customer" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShoppingModel.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShoppingModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShoppingModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="ShoppingModel.FK_Products_Category" ManuallyRouted="false" />
         <AssociationConnector Association="ShoppingModel.FK_Orders_Customers" ManuallyRouted="false" />
         <AssociationConnector Association="ShoppingModel.FK_Orders_Products" ManuallyRouted="false" />

@@ -16,5 +16,17 @@ namespace ShopApp1
         {
             InitializeComponent();
         }
+
+        private void AddCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCategory adc = new AddCategory();
+            adc.ShowDialog();
+        }
+
+        private void AddProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddProduct addpr = new AddProduct();
+            addpr.ShowDialog();
+        }
     }
 }
